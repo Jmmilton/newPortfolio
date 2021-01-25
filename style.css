@@ -3,11 +3,6 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  /* background-image: url(./images/ryan-moreno-w1_4YH5IhDg-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; */
-  /* background: linear-gradient(); */
 }
 
 html {
@@ -20,7 +15,6 @@ section {
   min-width: 100%;
   min-height: 100%;
   max-width: 100%;
-  /* display: flex; */
   text-align: center;
 }
 
@@ -32,8 +26,6 @@ section {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  /* text-align: center; */
   display: flex;
 }
 
@@ -41,10 +33,12 @@ section {
   margin: auto;
   margin-top: 30vh;
   display: block;
+  font-family: "Maven Pro", sans-serif;
+  line-height: 1.5;
 }
 
 .top {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .bottom {
@@ -52,26 +46,20 @@ section {
 }
 
 h2 {
+  font-size: 40px;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 30px;
   text-decoration: underline;
   color: rgb(0, 0, 0);
-}
-
-.about {
-  /* text-align: center; */
-  /* color: rgb(0, 0, 0); */
-}
-
-.about h2 {
-  /* position: relative; */
+  font-family: "Maven Pro", sans-serif;
 }
 
 .about-left p,
 .about-right p {
   width: 50%;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -82,11 +70,6 @@ h2 {
 }
 
 /* Project Gallery */
-
-.project-gallery {
-  /* text-align: center; */
-  /* color: rgb(0, 0, 0); */
-}
 
 .gallery-container {
   display: flex;
@@ -108,10 +91,12 @@ h2 {
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .project-item:hover {
   cursor: pointer;
+  background-color: #dedede;
 }
 
 .project-item * {
@@ -125,7 +110,7 @@ h2 {
 }
 
 .project-item:hover img {
-  opacity: 0.1;
+  opacity: 0.08;
 }
 
 .project-info {
@@ -134,11 +119,12 @@ h2 {
   position: absolute;
   top: -100px;
   left: 10%;
-  color: #01a2ac;
+  color: black;
 }
 
 .project-info h3 {
-  color: gainsboro;
+  color: black;
+  font-family: "Maven Pro", sans-serif;
 }
 
 .project-item:hover .project-info {
@@ -154,14 +140,21 @@ h2 {
   bottom: -100px;
   left: 25%;
   width: 50%;
-  border: 3px solid #01a2ac;
+  border: 3px solid #565656;
+  border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
+  background-color: #dedede;
+}
+
+.go-btn {
+  color: #565656;
+  font-family: "Roboto", sans-serif;
 }
 
 .go-btn:hover {
-  background-color: purple;
+  background-color: white;
 }
 
 .btn-link {
@@ -179,10 +172,17 @@ div .form-box {
   display: inline-block;
   width: 80%;
   padding: 37px;
+  font-family: "Roboto", sans-serif;
 }
 
 .submit-btn {
   background-color: rgb(244, 244, 244) !important;
+}
+
+.submit-btn:hover {
+  background-color: #565656 !important;
+  color: #dedede !important;
+  border: 1px solid #dedede;
 }
 
 .links {
@@ -196,29 +196,30 @@ div .form-box {
   color: rgb(62 62 62);
 }
 
-/* .footer-hr {
-  border: 1px solid rgb(244, 244, 244);
-  margin-top: 20px;
-  margin-bottom: 20px;
-} */
-
-#topBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
+.scrollToTopBtn {
   background-color: #565656;
-  color: aliceblue;
-  cursor: pointer;
-  padding: 15px;
+  border: none;
   border-radius: 10px;
-  font-size: 18px;
-  /* transition: ease-in-out 400ms; */
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+  font-family: "Maven Pro", sans-serif;
 }
 
-#topBtn:hover {
-  background-color: #555;
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scrollToTopBtn:hover {
+  color: #565656;
+  background-color: rgb(200, 201, 200);
 }
