@@ -192,8 +192,14 @@ div .form-box {
 }
 
 .icons {
-  padding: 30px;
+  margin: 30px;
   color: rgb(62 62 62);
+  transition: ease-in-out 300ms;
+}
+
+.icons:hover {
+  color: #0b59ca;
+  transform: scale(1.2);
 }
 
 .scrollToTopBtn {
