@@ -27,6 +27,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  background-attachment: fixed;
 }
 
 .main h1 {
