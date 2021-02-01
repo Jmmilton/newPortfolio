@@ -19,7 +19,7 @@ section {
 }
 
 .main {
-  background-image: url(./images/adrian-Xft-JdC-Jbc-unsplash.jpg);
+  background-image: url(/images/adrian-Xft-JdC-Jbc-unsplash.jpg);
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
