@@ -4,6 +4,7 @@ let name = document.getElementById('name');
 let email = document.getElementById('email');
 let message = document.getElementById('message');
 
+
 contactForm.addEventListener('submit', (e)=> {
     e.preventDefault();
 
@@ -13,12 +14,14 @@ contactForm.addEventListener('submit', (e)=> {
         message: message.value
     }
 
+    console.log(formData)
+
     let xhr = new XMLHttpRequest()
     xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function(){
         console.log(xhr.responseText)
-        if(xhr.responseText == 'sucess'){
+        if(xhr.responseText == 'success'){
             alert('Email Sent!');
             name.value = '';
             email.value = '';
