@@ -49,51 +49,68 @@
 
 <!-- Projects -->
     <section class="project-gallery">
-        <h2>Projects</h2>
-        <div class="gallery-container">
-            <div class="project-item" id="1">
-                <img class="project-img" src="./images/Trivia.png" alt="">
-                <div class="project-info">
-                    <h3>Trivia Game</h3>
-                    <p>Trivia Game Using Parsed Json Object</p>
+        <div class="container-fluid">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="gallery-container">
+                    <div class="project-item col-6" id="1">
+                        <img class="project-img" src="./images/Trivia.png" alt="">
+                        <div class="project-info">
+                            <h3>Trivia Game</h3>
+                            <p>Trivia Game Using Parsed Json Object</p>
+                        </div>
+                        <a class="btn-link" target="blank" href="https://trivia-81122.web.app/">
+                            <div class="go-btn">View Site</div>
+                        </a>
+                    </div>
+            
+                    <div class="project-item col-6" id="2">
+                        <img class="project-img" src="./images/fitness.png" alt="">
+                        <div class="project-info">
+                            <h3>Fitness Website</h3>
+                            <p>Fitness site I built as practise</p>
+                        </div>
+                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/fitness/">
+                            <div class="go-btn">View Site</div>
+                        </a>
+                    </div>
                 </div>
-                <a class="btn-link" target="blank" href="https://trivia-81122.web.app/"><div class="go-btn">View Site</div></a>
             </div>
-    
-            <div class="project-item" id="2">
-                <img class="project-img" src="./images/fitness.png" alt="">
-                <div class="project-info">
-                    <h3>Fitness Website</h3>
-                    <p>Fitness site I built as practise</p>
+            <div class="row">
+                <div class="gallery-container">
+                    <div class="project-item col-6" id="4">
+                        <img class="project-img" src="./images/milton.png" alt="">
+                        <div class="project-info">
+                            <h3>MiltonDesign inc.</h3>
+                            <p>Website I built for a client<br>(Still in progress)</p>
+                        </div>
+                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/miltondesigninc/">
+                            <div class="go-btn">View Site</div>
+                        </a>
+                    </div>
+            
+                    <div class="project-item col-6" id="5">
+                        <img class="project-img" src="./images/outdoors.png" alt="">
+                        <div class="project-info">
+                            <h3>Outdoors Website</h3>
+                            <p>Website I built for practise</p>
+                        </div>
+                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/Outdoors/">
+                            <div class="go-btn">View Site</div>
+                        </a>
+                    </div>
+            
+                    <div class="project-item col-6" id="6">
+                        <img class="project-img" src="./images/thirdeye1.png" alt="">
+                        <div class="project-info">
+                            <h3>Third Eye Cleaning</h3>
+                            <p>Website I built for a client</p>
+                        </div>
+                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/thirdeyecleaning/">
+                            <div class="go-btn">View Site</div>
+                        </a>
+                    </div>
                 </div>
-                <a class="btn-link" target="blank" href="https://jmmilton.github.io/fitness/"><div class="go-btn">View Site</div></a>
-            </div>
-    
-            <div class="project-item" id="4">
-                <img class="project-img" src="./images/milton.png" alt="">
-                <div class="project-info">
-                    <h3>MiltonDesign inc.</h3>
-                    <p>Website I built for a client<br>(Still in progress)</p>
-                </div>
-                <a class="btn-link" target="blank" href="https://jmmilton.github.io/miltondesigninc/"><div class="go-btn">View Site</div></a>
-            </div>
-    
-            <div class="project-item" id="5">
-                <img class="project-img" src="./images/outdoors.png" alt="">
-                <div class="project-info">
-                    <h3>Outdoors Website</h3>
-                    <p>Website I built for practise</p>
-                </div>
-                <a class="btn-link" target="blank" href="https://jmmilton.github.io/Outdoors/"><div class="go-btn">View Site</div></a>
-            </div>
-    
-            <div class="project-item" id="6">
-                <img class="project-img" src="./images/thirdeye1.png" alt="">
-                <div class="project-info">
-                    <h3>Third Eye Cleaning</h3>
-                    <p>Website I built for a client</p>
-                </div>
-                <a class="btn-link" target="blank" href="https://jmmilton.github.io/thirdeyecleaning/"><div class="go-btn">View Site</div></a>
             </div>
         </div>
     </section>
@@ -101,33 +118,35 @@
     <!-- Contact -->
 
     <section class="contact">
-        <div class="wrapper">
-            <h2>Contact </h2>
-            <form enctype="text/plain" class="form-box">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" placeholder="Name">
-                    <label for="floatingInput">Name</label>
+        <div class="container-fluid contact">
+            <div class="wrapper">
+                <h2>Contact </h2>
+                <form enctype="text/plain" class="form-box">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea id="message" class="form-control" placeholder="Leave a message here" ></textarea>
+                        <label for="floatingTextarea">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-lg submit-btn">Submit</button>
+                </form>
+                <footer>
+                <div class="links">
+                    <a href="https://github.com/Jmmilton" class="gplus-ic icons">
+                        <i class="fab fa-github fa-3x white-text"></i></a>
+                    <a href="https://www.linkedin.com/in/jasonmmilton/" class="li-ic icons">
+                        <i class="fab fa-linkedin-in fa-3x white-text"></i>
+                    </a>
+                    <a href="mailto:jay13milton@gmail.com" target="_blank" class="icons"><i class="fas fa-envelope fa-3x"></i></a>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <textarea id="message" class="form-control" placeholder="Leave a message here" ></textarea>
-                    <label for="floatingTextarea">Message</label>
-                </div>
-                <button type="submit" class="btn btn-lg submit-btn">Submit</button>
-            </form>
-            <footer>
-            <div class="links">
-                <a href="https://github.com/Jmmilton" class="gplus-ic icons">
-                    <i class="fab fa-github fa-3x white-text"></i></a>
-                <a href="https://www.linkedin.com/in/jasonmmilton/" class="li-ic icons">
-                    <i class="fab fa-linkedin-in fa-3x white-text"></i>
-                </a>
-                <a href="mailto:jay13milton@gmail.com" target="_blank"><i class="fas fa-envelope fa-3x icons"></i></a>
+                </footer>
             </div>
-            </footer>
         </div>
     </section>
 
