@@ -1,12 +1,24 @@
 const express = require('express');
-// const path = require('path');
 require("dotenv").config();
 const app = express();
-// const bodyParser = require('body-parser')
 const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 
 let pass = process.env.PASSWORD;
 const PORT = process.env.PORT || 5000;
+
+const oauth2Client = new OAuth2(
+    process.env.CLIENTID,
+    process.env.SECRET,
+    "https://developers.google.com/oauthplayground"
+);
+
+oauth2Client.setCredentials({
+    refresh_token: process.env.REFTOKEN
+});
+const accessToken = oauth2Client.getAccessToken()
+
 
 
 //Middleware
@@ -21,13 +33,25 @@ app.get('/', (req, res)=> {
 app.post('/', (req, res) => {
     console.log(req.body)
 
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
+    // const transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         user: 'jay13milton@gmail.com',
+    //         pass: pass,
+    //     }
+    // })
+
+    const smtpTransport = nodemailer.createTransport({
+        service: "gmail",
         auth: {
-            user: 'jay13milton@gmail.com',
-            pass: pass,
+             type: "OAuth2",
+             user: "jay13milton@gmail.com", 
+             clientId: process.env.CLIENTID,
+             clientSecret: process.env.SECRET,
+             refreshToken: process.env.REFTOKEN,
+             accessToken: process.env.ACCESSTOKEN
         }
-    })
+   });
 
     const mailOptions = {
         from: req.body.email,
@@ -36,15 +60,20 @@ app.post('/', (req, res) => {
         text: req.body.message
     }
 
-    transporter.sendMail(mailOptions, (error, info)=>{
-        if(error){
-            console.log(error)
-            res.send('error')
-        } else {
-            console.log('Email sent: ' + info.response, req.body.message)
-            res.send('success')
-        }
-    })
+    // transporter.sendMail(mailOptions, (error, info)=>{
+    //     if(error){
+    //         console.log(error)
+    //         res.send('error')
+    //     } else {
+    //         console.log('Email sent: ' + info.response, req.body.message)
+    //         res.send('success')
+    //     }
+    // })
+
+    smtpTransport.sendMail(mailOptions, (error, response) => {
+        error ? console.log(error) : res.send('success');
+        smtpTransport.close();
+   });
 })
  
 app.listen(PORT, () =>{
