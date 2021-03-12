@@ -7,6 +7,7 @@ const OAuth2 = google.auth.OAuth2;
 
 let pass = process.env.PASSWORD;
 const PORT = process.env.PORT || 5000;
+let refresh_token = process.env.REFTOKEN
 
 const oauth2Client = new OAuth2(
     process.env.CLIENTID,
