@@ -9,18 +9,18 @@ let pass = process.env.PASSWORD;
 const PORT = process.env.PORT || 5000;
 
 const CLIENT_ID = process.env.CLIENTID;
-const CLEINT_SECRET = process.env.SECRET;
+const CLIENT_SECRET = process.env.SECRET;
 const REDIRECT_URI = process.env.REDIRECTURI;
 const REFRESH_TOKEN = process.env.REFTOKEN;
 
 const oauth2Client = new OAuth2(
-    process.env.CLIENT_ID,
-    process.env.CLIENT_SECRET,
+    CLIENT_ID,
+    CLIENT_SECRET,
     "https://developers.google.com/oauthplayground"
 );
 
 oauth2Client.setCredentials({
-    refresh_token: process.env.REFRESH_TOKEN
+    refresh_token: REFRESH_TOKEN
 });
 const accessToken = oauth2Client.getAccessToken()
 
@@ -50,9 +50,9 @@ app.post('/', (req, res) => {
         auth: {
              type: "OAuth2",
              user: "jay13milton@gmail.com", 
-             clientId: process.env.CLIENT_ID,
-             clientSecret: process.env.CLIENT_SECRET,
-             refreshToken: process.env.REFRESH_TOKEN,
+             clientId: CLIENT_ID,
+             clientSecret: CLIENT_SECRET,
+             refreshToken: REFRESH_TOKEN,
              accessToken: process.env.ACCESSTOKEN
         }
    });
