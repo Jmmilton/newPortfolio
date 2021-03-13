@@ -8,17 +8,21 @@ const OAuth2 = google.auth.OAuth2;
 let pass = process.env.PASSWORD;
 const PORT = process.env.PORT || 5000;
 
+const CLIENT_ID = process.env.CLIENTID;
+const CLEINT_SECRET = process.env.SECRET;
+const REDIRECT_URI = process.env.REDIRECTURI;
+const REFRESH_TOKEN = process.env.REFTOKEN;
+
 const oauth2Client = new OAuth2(
-    process.env.CLIENTID,
-    process.env.SECRET,
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
     "https://developers.google.com/oauthplayground"
 );
 
 oauth2Client.setCredentials({
-    refresh_token: process.env.REFTOKEN
+    refresh_token: process.env.REFRESH_TOKEN
 });
 const accessToken = oauth2Client.getAccessToken()
-
 
 
 //Middleware
@@ -31,7 +35,7 @@ app.get('/', (req, res)=> {
 })
 
 app.post('/', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
 
     // const transporter = nodemailer.createTransport({
     //     service: 'gmail',
@@ -46,9 +50,9 @@ app.post('/', (req, res) => {
         auth: {
              type: "OAuth2",
              user: "jay13milton@gmail.com", 
-             clientId: process.env.CLIENTID,
-             clientSecret: process.env.SECRET,
-             refreshToken: process.env.REFTOKEN,
+             clientId: process.env.CLIENT_ID,
+             clientSecret: process.env.CLIENT_SECRET,
+             refreshToken: process.env.REFRESH_TOKEN,
              accessToken: process.env.ACCESSTOKEN
         }
    });
@@ -56,7 +60,7 @@ app.post('/', (req, res) => {
     const mailOptions = {
         from: req.body.email,
         to: 'jay13milton@gmail.com',
-        // subject: `Message from ${req.body.email}: ${req.body.subject}`,
+        subject: `Message received from Portfolio`,
         text: req.body.message
     }
 
