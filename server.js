@@ -8,6 +8,8 @@ const OAuth2 = google.auth.OAuth2;
 let pass = process.env.PASSWORD;
 const PORT = process.env.PORT || 5000;
 
+
+
 const CLIENT_ID = process.env.CLIENTID;
 const CLIENT_SECRET = process.env.SECRET;
 const REDIRECT_URI = process.env.REDIRECTURI;
@@ -22,8 +24,8 @@ const oauth2Client = new OAuth2(
 oauth2Client.setCredentials({
     refresh_token: REFRESH_TOKEN
 });
-const accessToken = oauth2Client.getAccessToken()
 
+const accessToken = oauth2Client.getAccessToken()
 
 //Middleware
 
@@ -56,6 +58,7 @@ app.post('/', (req, res) => {
              accessToken: process.env.ACCESSTOKEN
         }
    });
+//    console.log(REFRESH_TOKEN)
 
     const mailOptions = {
         from: req.body.email,
