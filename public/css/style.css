@@ -44,7 +44,8 @@ section {
 }
 
 .bottom {
-  font-size: 30px;
+  font-size: 20px !important;
+  font-weight: 100;
 }
 
 h2 {
@@ -224,7 +225,7 @@ textarea {
 
 .icons {
   margin: 30px;
-  color: rgb(62 62 62);
+  color: rgb(62, 62, 62);
   transition: ease-in-out 300ms;
 }
 

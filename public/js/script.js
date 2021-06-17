@@ -25,3 +25,16 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 let observer = new IntersectionObserver(callback);
 
 observer.observe(target)
+
+
+const projectItem = document.querySelectorAll('.project-item');
+
+for(var i = 0; i < projectItem.length; i++){
+    projectItem[i].addEventListener('focusin', function(){
+        if(!projectItem[i].classList == 'project-item:hover'){
+        projectItem[i].classList.addClass('project-item:hover')
+        } else {
+        projectItem[i].classList.remove('project-item:hover')
+        }
+    }, false)
+}
