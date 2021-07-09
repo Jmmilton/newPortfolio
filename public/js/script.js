@@ -38,3 +38,14 @@ for(var i = 0; i < projectItem.length; i++){
         }
     }, false)
 }
+
+
+const seeMoreBtn = document.querySelector('.see-more');
+const hiddenGallery = document.querySelector('.scrolling-wrapper');
+
+function showMore() {
+    hiddenGallery.classList.toggle("show-overflow")
+    seeMoreBtn.classList.toggle("see-less")
+}
+
+seeMoreBtn.addEventListener("click", showMore)

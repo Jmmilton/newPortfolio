@@ -19,7 +19,7 @@
         <h1>
             <span class="top">Jason Milton</span>
             <br>
-            <span class="bottom">Hi, I'm Jason, a front-end developer based in Toronto</span>
+            <span class="bottom">Hi, I'm Jason<span class="add-comma">,</span><br class="add-br"> a front-end developer based in Toronto</span>
         </h1>
     </section>
 
@@ -30,10 +30,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <p>I am Frontend Developer born in Caledon, ON and currently living in Toronto.</p>
-                        <p>I am primarily self-taught, but I am currently attending a Fullstack Developer course at York University.</p>
+                        <p>I am Frontend Developer born in Caledon, Ontario and currently living in Toronto.</p>
+                        <p>I'm a self-taught front-end developer since mid 2020. I started with HTML, CSS, Bootstrap, and Vanilla JS.</p>
+                        <p>I have developed a few landing pages for some small to medium businesses that can be found here on my website.</p>
+                        <p>For a while now I've been constantly improving my skills. I started learning on my own using platforms such as FreeCodeCamp, Udemy and Frontend Masters and then I decided my next step would be to join a Fullstack Development course at York University. I felt that this course would be perfect for me because I was curious about how the frontend connects with the backend and everything that goes on in between, and it is great to have the experience of working with others. </p>
+                        <p>I'm really enjoying web development and I’m always researching new technologies and good practices. <p>
                         <p class="bottom"><strong>My skills include:</strong></p>
-                        <p>HTML, CSS/SASS, Javascript(ES6+), and I'm currently learning React and NodeJS</p>
+                        <p>HTML, CSS/SASS, Javascript(ES6+), Git, Bootstrap, React, NodeJS, MySQL, and Docker</p>
+                        <br>
+                        <p class="resume-link">Please view more by downloading my Resume</p>
+                        <a href="./resume/JasonMilton-Resume-July1.pdf" download>
+                            <i class="fas fa-download fa-3x icons" alt="Jason Milton Resume"></i>
+                          </a>
                     </div>
                 </div>
             </div>
@@ -42,78 +50,135 @@
 
 <!-- Projects -->
     <section class="project-gallery">
-        <div class="container-fluid">
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="gallery-container">
-                    <div class="project-item col-6" id="1">
-                        <img tabindex="0" role="dialog" class="project-img" src="./images/Trivia.png" alt="">
-                        <div class="project-info">
-                            <h3>Trivia Game</h3>
-                            <!-- <p>Trivia Game Using Parsed Json Object</p> -->
+        <h2>Projects</h2>
+        <div class="scrolling-wrapper">
+            <a href="#slide1" class="prev">
+                <span class="fas fa-angle-left fa-3x arrow-prev prev" aria-hidden="true"></span>
+            </a>
+            <a href="#slide2" class="next">
+                <span class="fas fa-angle-left fa-3x arrow-next next" aria-hidden="true"></span>
+            </a>
+            <!-- <ul class="indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+            </ul> -->
+            <div class="container-fluid gallery-wrapper" id="slide1">
+                <div class="row">
+                    <div class="gallery-container col-md-1 col-xl-12 col-lg-6">
+                        <div class="project-item col-6 col-md-12" id="1">
+                            <img role="dialog" class="project-img" src="./images/siphon.png" alt="">
+                            <div class="project-info">
+                                <h3>Siphon Finance</h3>
+                            </div>
+                            <a class="btn-link" target="blank" href="https://siphon.finance">
+                                <div class="go-btn">View Site</div>
+                            </a>
                         </div>
-                        <a class="btn-link" target="blank" href="https://trivia-81122.web.app/">
-                            <div class="go-btn">View Site</div>
-                        </a>
-                    </div>
+
+                        <div class="project-item col-6" id="2">
+                            <img role="dialog" class="project-img" src="./images/Trivia.png" alt="">
+                            <div class="project-info">
+                                <h3>Trivia Game</h3>
+                                <p>Built using Parsed Json Object <br> Hosted using Firebase</p>
+                            </div>
+                            <a class="btn-link" target="blank" href="https://trivia-81122.web.app/">
+                                <div class="go-btn">View Site</div>
+                            </a>
+                        </div>
             
-                    <div class="project-item col-6" id="2">
-                        <img class="project-img" src="./images/fitness.png" alt="">
-                        <div class="project-info">
-                            <h3>Fitness Website</h3>
-                            <!-- <p>Fitness site I built as practise</p> -->
+                        <div class="project-item col-6" id="3">
+                            <img class="project-img" src="./images/School.png" alt="">
+                            <div class="project-info">
+                                <h3>School Project</h3>
+                                <p>CRUD application built with React, nodeJS, mySQL, Docker, and GCP. Includes log in panel with JWT authentication</p>
+                            </div>
+                            <a class="btn-link" target="blank" href="http://portfolio-1040.jasonmilton.me/">
+                                <div class="go-btn">View Site</div>
+                            </a>
                         </div>
-                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/fitness/">
-                            <div class="go-btn">View Site</div>
-                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="gallery-container">
+                        <div class="project-item col-6" id="4">
+                            <img class="project-img" src="./images/milton.png" alt="">
+                            <div class="project-info">
+                                <h3>MiltonDesign inc.</h3>
+                                <p>(Still in progress)</p>
+                            </div>
+                            <a class="btn-link" target="blank" href="https://jmmilton.github.io/miltondesigninc/">
+                                <div class="go-btn">View Site</div>
+                            </a>
+                        </div>
+            
+                        <div class="project-item col-6" id="5">
+                            <img class="project-img" src="./images/thirdeye1.png" alt="">
+                            <div class="project-info">
+                                <h3>Third Eye Cleaning</h3>
+                                <!-- <p>Website I built for a client</p> -->
+                            </div>
+                            <a class="btn-link" target="blank" href="https://jmmilton.github.io/thirdeyecleaning/">
+                                <div class="go-btn">View Site</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="gallery-container">
-                    <div class="project-item col-6" id="4">
-                        <img class="project-img" src="./images/milton.png" alt="">
-                        <div class="project-info">
-                            <h3>MiltonDesign inc.</h3>
-                            <p>(Still in progress)</p>
+
+            <!--  -->
+
+            <div class="container-fluid  gallery-wrapper"  id="slide2">
+                <div class="row">
+                    <div class="gallery-container">
+                        <div class="project-item col-6" id="6">
+                            <img class="project-img" src="./images/fitness.png" alt="">
+                            <div class="project-info">
+                                <h3>Fitness Website</h3>
+                                <p>Created based on Figma prototype</p>
+                            </div>
+                            <a class="btn-link" target="blank" href="https://jmmilton.github.io/fitness/">
+                                <div class="go-btn">View Site</div>
+                            </a>
                         </div>
-                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/miltondesigninc/">
-                            <div class="go-btn">View Site</div>
-                        </a>
                     </div>
-            
-                    <div class="project-item col-6" id="5">
-                        <img class="project-img" src="./images/outdoors.png" alt="">
-                        <div class="project-info">
-                            <h3>Outdoors Website</h3>
-                            <!-- <p>Website I built for practise</p> -->
+                </div>
+
+                <div class="row"></div>
+                    <div class="gallery-container">
+                        <div class="project-item col-6" id="7">
+                            <img class="project-img" src="./images/colourgame.png" alt="">
+                            <div class="project-info">
+                                <h3>Colour Guessing Game</h3>
+                                <p>Created with HTML, CSS and Javascript</p>
+                            </div>
+                            <a class="btn-link" target="blank" href="https://jmmilton.github.io/RGB-GuessingGame/">
+                                <div class="go-btn">View Site</div>
+                            </a>
                         </div>
-                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/Outdoors/">
-                            <div class="go-btn">View Site</div>
-                        </a>
-                    </div>
-            
-                    <div class="project-item col-6" id="6">
-                        <img class="project-img" src="./images/thirdeye1.png" alt="">
-                        <div class="project-info">
-                            <h3>Third Eye Cleaning</h3>
-                            <!-- <p>Website I built for a client</p> -->
+
+                        <div class="project-item col-6" id="8">
+                            <img class="project-img" src="./images/outdoors.png" alt="">
+                            <div class="project-info">
+                                <h3>Outdoors Website</h3>
+                                <p>Created based on Figma prototype</p>
+                            </div>
+                            <a class="btn-link" target="blank" href="https://jmmilton.github.io/Outdoors/">
+                                <div class="go-btn">View Site</div>
+                            </a>
                         </div>
-                        <a class="btn-link" target="blank" href="https://jmmilton.github.io/thirdeyecleaning/">
-                            <div class="go-btn">View Site</div>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <button class="see-more"></button>
     </section>
 
     <!-- Contact -->
 
     <section class="contact">
         <div class="container-fluid contact">
-            <div class="wrapper">
-                <h2>Contact Me</h2>
+            <div class="contact-wrapper">
                 <!-- <form enctype="text/plain" class="form-box">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="name" placeholder="Name">
@@ -129,31 +194,31 @@
                     </div>
                     <button type="submit" class="btn btn-lg submit-btn">Submit</button>
                 </form> -->
-                <h4>Email me at: <a href="mailto:jay13milton@gmail.com">Jason.MiltonM@gmail.com</a></h4>
+                <h4 class="contact-email">Please feel free to contact me at: </h4><h4><a href="mailto:Jason.MiltonM@gmail.com" target="_blank">Jason.MiltonM@gmail.com</a></h4>
                 <footer>
-                    <div class="row">
+                    <!-- <div class="row"> -->
                         <div class="links">
                             <div class="col-lg-1">
                                 <a href="https://github.com/Jmmilton" target="blank" class="gplus-ic icons">
-                                    <i class="fab fa-github fa-3x white-text"></i></a>
+                                    <i class="fab fa-github fa-3x white-text icons"></i></a>
                             </div>
                             <div class="col-lg-1">
                                 <a href="https://www.linkedin.com/in/jasonmmilton/" target="blank" class="li-ic icons">
-                                    <i class="fab fa-linkedin-in fa-3x white-text"></i>
+                                    <i class="fab fa-linkedin-in fa-3x white-text icons"></i>
                                 </a>
                             </div>
                             <div class="col-lg-1">
-                                <a href="mailto:jay13milton@gmail.com" target="_blank" class="icons"><i class="fas fa-envelope fa-3x"></i>
+                                <a href="mailto:Jason.MiltonM@gmail.com" target="_blank" class="icons"><i class="fas fa-envelope fa-3x icons"></i>
                                 </a>
                             </div>
                         </div> 
-                    </div>
+                    <!-- </div> -->
+                    <button onclick="topFunction()" id="topBtn" class="scrollToTopBtn" title="Go to top">Back to top</button>
                 </footer>
             </div>
         </div>
     </section>
-
-    <button onclick="topFunction()" id="topBtn" class="scrollToTopBtn" title="Go to top">Back to top</button>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
